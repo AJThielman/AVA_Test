@@ -63,15 +63,17 @@
 
 
             <script>
-                function getURL2() {
+                function getURL23() {
                     var url = (window.location != window.parent.location)
             ? document.referrer
             : document.location.href;
-                    alert("The URL of this page is222: " + url);
+                    //alert("The URL of this page is222: " + url);
+
+                    window.open(url, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
                 }
                 </script>
                  
-                <button type="button" onclick="getURL2();">Get Page URL2222</button>
+                <button type="button" onclick="getURL23();">Get Page URL2333</button>
 
 
         <div id="vizContainer" style="width:1600px; height:1600px;"></div>
