@@ -16,11 +16,9 @@
                             document.getElementById('getData').disabled = false; // Enable our button
                         }
                     };
-                viz = new tableau.Viz(containerDiv, url, options);
-            }
 
 
-            var containerDiv = document.getElementById("vizContainer2"),
+                    var containerDiv2 = document.getElementById("vizContainer2"),
                     url = "https://tableau.finance.dwt.com/views/SuperstorewithnewExtension/Overview",
                     options = {
                         hideTabs: true,
@@ -29,9 +27,13 @@
                             document.getElementById('getData').disabled = false; // Enable our button
                         }
                     };
+
                 viz = new tableau.Viz(containerDiv, url, options);
+                viz = new tableau.Viz(containerDiv2, url, options);
             }
 
+
+            
             function getUnderlyingData(){
                 sheet = viz.getWorkbook().getActiveSheet().getWorksheets().get("Sales by Segment");
 		 // If the active sheet is not a dashboard, then you can just enter:
