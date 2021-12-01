@@ -54,13 +54,25 @@
 
         <script>
             function getURL() {
+                
                 alert("The URL of this page is: " + window.location.href);
             }
             </script>
              
             <button type="button" onclick="getURL();">Get Page URL</button>
 
-            
+
+            <script>
+                function getURL2() {
+                    var url = (window.location != window.parent.location)
+            ? document.referrer
+            : document.location.href;
+                    alert("The URL of this page is222: " + url);
+                }
+                </script>
+                 
+                <button type="button" onclick="getURL2();">Get Page URL2222</button>
+
 
         <div id="vizContainer" style="width:1600px; height:1600px;"></div>
         <div id="dataTarget"></div>
