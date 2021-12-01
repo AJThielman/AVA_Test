@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+
+    <httpProtocol>
+        <customHeaders>
+            <add name="X-Frame-Options" value="SAMEORIGIN" />
+        </customHeaders>
+    </httpProtocol>
+    
     <head>
         <title>getData() Basic Example 88</title>
 		<script type="text/javascript" src="https://tableau.finance.dwt.com/javascripts/api/tableau-2.8.0.min.js"></script>
@@ -62,7 +69,7 @@
 
     <body onload="initViz();">
         <div class="page-header">
-            <h1>getData() Basic Example 5555 (NEW!!!!)</h1>
+            <h1>getData() Basic Example 5555 (NEW!!!!)123456789</h1>
             <p>Click the "Get Data" button to get underlying data for the viz.</p>
             <button id="getData" onclick="getUnderlyingData2()" class="btn" disabled>Get Data</button>
         </div>
