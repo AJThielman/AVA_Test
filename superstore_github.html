@@ -1,85 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- These two libraries are local versions of datatables: https://datatables.net/download/ -->
-    <link rel="stylesheet" type="text/css" href="/lib/datatables.min.css"/>
-    <script type="text/javascript" src="/lib/datatables.min.js"></script>
-    
-    <!-- Include the Tableau Extensions library so we can communicate with Tableau -->
-    <script src="/lib/tableau.extensions.1.latest.js"></script>
-
-    <!-- Include our own style sheets and javascript code -->
-    <link rel="stylesheet" href="../../demo-snippets/complete.css">
-    <link rel="stylesheet" href="../../lib/google-material-icons.css">
-    <script src="../../lib/demoHelpers.js"></script>
-    <script src="/superstore.js"></script>
-
-
-
-    <script type="text/javascript">
-      // Determine how the browser should listen for messages from other
-      // windows. If `addEventListener` exists, then use that. Otherwise, use
-      // `attachEvent` because an older browser is probably being used. Also,
-      // use a callback to handle messages so that both methods of "message
-      // listening" can be routed to the same function. The callback in this
-      // example is `handleMessage` and it will take one argument (the
-      // `MessageEvent` object).
-      if (window.addEventListener) {
-        window.addEventListener("message", handleMessage);
-      } else {
-        window.attachEvent("onmessage", handleMessage);
-      }
-  
-      /**
-       * Handle a message that was sent from some window.
-       *
-       * @param {MessageEvent} event The MessageEvent object holding the message/data.
-       */
-      function handleMessage(event) {
-        console.log("Received a message from " + event.origin + ".");
-  
-        // If the window that sent this message is not https://ajthielman.github.io, then
-        // that message needs to be thrown out.
-        if (event.origin != "https://ajthielman.github.io") {
-          console.log("The message came from some site we don't know. We're not processing it.");
-          return;
-        }
-  
-        // When one window sends a message, or data, to another window via
-        // `parent.postMessage()`, the message (the first argument) in the
-        // `parent.postMessage()` call is accessible via `event.data` here.
-        var dataFromChildIframe = event.data;
-  
-        // Log the data to the console.
-        console.log(dataFromChildIframe);
-  
-        // Show that the data was received.
-        $(".status-message").text("Data received! This status message will reset in 5 seconds.");
-        if (dataFromChildIframe.user_age == 1) {
-          $(".user-data .user-age").html("The user is <strong>" + dataFromChildIframe.user_age + "</strong> year old.");
-        } else {
-          $(".user-data .user-age").html("The user is <strong>" + dataFromChildIframe.user_age + "</strong> years old.");
-        }
-        $(".user-data .user-height").html("The user is <strong>" + dataFromChildIframe.user_height + "</strong> inches tall.");
-        $(".user-data").slideDown(200, function() {
-          setTimeout(function() {
-            $(".user-data").slideUp(200);
-            $(".status-message").html("Waiting for data from <code>https://ajthielman.github.io</code>...");
-          }, 5000);
-        });
-      }
-    </script>
-
-
-
-
-
-</head>
 <style>
   .center {
     margin: auto;
@@ -90,7 +11,7 @@
 
 <body>
   <h4 class="center">
-    Hello World 9999!!!!!!!! (NEWWWW88888!)
+    Helloxxxxxxxxxxxxxxxxxxxx
     <div id="test">
   </h4>
   <p>This button transfers you to another website!</p>
@@ -102,9 +23,9 @@
 
 
 <div class="page-header">
-  <h1>getData() Basic Example WORK!!!!456</h1>
+  <h1>getData() Basic Example WORK!!!!PLEASE PLEASExxxxxxxxx</h1>
   <p>Click the "Get Data" button to get underlying data for the viz.</p>
-  <button id="getData" onclick="window.parent.contentWindow['getUnderlyingData2']" class="btn">Get Data</button>
+  <button id="getData" onclick="window.parent.getUnderlyingData2()" class="btn">Get Data</button>
 </div>
 
 
