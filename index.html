@@ -19,6 +19,19 @@
                 viz = new tableau.Viz(containerDiv, url, options);
             }
 
+
+            var containerDiv = document.getElementById("vizContainer2"),
+                    url = "https://tableau.finance.dwt.com/views/SuperstorewithnewExtension/Overview",
+                    options = {
+                        hideTabs: true,
+                        hideToolbar: true,
+                        onFirstInteractive: function () {
+                            document.getElementById('getData').disabled = false; // Enable our button
+                        }
+                    };
+                viz = new tableau.Viz(containerDiv, url, options);
+            }
+
             function getUnderlyingData(){
                 sheet = viz.getWorkbook().getActiveSheet().getWorksheets().get("Sales by Segment");
 		 // If the active sheet is not a dashboard, then you can just enter:
@@ -47,7 +60,7 @@
 
     <body onload="initViz();">
         <div class="page-header">
-            <h1>getData() Basic Example</h1>
+            <h1>getData() Basic Example 5555</h1>
             <p>Click the "Get Data" button to get underlying data for the viz.</p>
             <button id="getData" onclick="getUnderlyingData2()" class="btn" disabled>Get Data</button>
         </div>
@@ -164,7 +177,7 @@ alert("The URL of this page is: " + queryString);
 
 
 
-        <div id="vizContainer" style="width:500px; height:500px;"></div>
+        <div id="vizContainer2" style="width:500px; height:500px;"></div>
 
 
     </body>
