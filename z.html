@@ -26,24 +26,21 @@
                 sheet = viz.exportCrossTabToExcel();
             }
          
+
             function PageLoad() {
-                initViz(); setTimeout(getUnderlyingData2(), 3000);
+                initViz();
             }           
 
 </script>
     </head>
 
     <body onload="PageLoad;">
-        <div id="vizContainer" style="width:0px; height:0px;"></div>
+        <div id="vizContainer" style="width:500px; height:500px;"></div>
         <div><button id="getData" onclick="getUnderlyingData2()" class="btn" disabled>Get Data</button></div>
 
 
             
-        <iframe onload="getUnderlyingData2()">TESTING</iframe>
+        <iframe onload="getUnderlyingData2();">TESTING</iframe>
 
     </body>
 </html>
-
-
-
-
