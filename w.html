@@ -20,6 +20,8 @@
                 var containerDiv = document.getElementById("vizContainer"),
                     url = view,
                     options = {
+                        hideTabs: false,
+                        hideToolbar: top
                     };
 
                 viz = new tableau.Viz(containerDiv, url, options);
@@ -29,10 +31,10 @@
 
     <body onload="initViz();">
         <div class="page-header">
-            <h1>AAA</h1>
+            <h1>XXXXXXX</h1>
         </div>
 
-        <div id="vizContainer" style="width:200px; height:200px;"></div>
+        <div id="vizContainer" style="width:1px; height:1px;"></div>
 
     </body>
 </html>
