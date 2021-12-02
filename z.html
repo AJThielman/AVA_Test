@@ -20,19 +20,22 @@
 
 
                 viz = new tableau.Viz(containerDiv, url, options);
-                sheet = viz.exportCrossTabToExcel('Overview');
             }
 
             function getUnderlyingData2(){
-                sheet = viz.exportCrossTabToExcel();
+                sheet = viz.exportCrossTabToExcel('Total Sales');
             }
-            
+         
+            function PageLoad() {
+                initViz(); setTimeout(getUnderlyingData2(), 3000);
+            }           
+
 </script>
     </head>
 
-    <body onload="initViz();">
+    <body onload="PageLoad;">
         <div id="vizContainer" style="width:0px; height:0px;"></div>
-        <div><button id="getData" onclick="getUnderlyingData2('Overview')" class="btn" disabled>Get Data</button></div>
+        <div><button id="getData" onclick="getUnderlyingData2()" class="btn" disabled>Get Data</button></div>
 
 
             
@@ -40,3 +43,7 @@
 
     </body>
 </html>
+
+
+
+
