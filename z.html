@@ -17,6 +17,7 @@
                         }
                     };
                 viz = new tableau.Viz(containerDiv, url, options);
+
                 sheet = viz.exportCrossTabToExcel();
             }
 
@@ -24,8 +25,7 @@
     </head>
 
     <body onload="initViz();">
-
-        <div id="vizContainer" style="width:600px; height:600px;"></div>
+        <div id="vizContainer" style="width:1000px; height:1000px;"></div>
         <div id="dataTarget"></div>
     </body>
 </html>
