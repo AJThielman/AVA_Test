@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>zzz Download</title>
+        <title>Test Download</title>
 		<script type="text/javascript" src="https://tableau.finance.dwt.com/javascripts/api/tableau-2.8.0.min.js"></script>
         <script type="text/javascript">
             var viz, sheet, table;
@@ -27,8 +27,8 @@
         </script>
     </head>
 
-    <body onload="initViz();getUnderlyingData2();">
-        <div id="vizContainer" style="width:1000px; height:1000px;"></div>
-        <div id="dataTarget"></div>
+    <body onload="initViz();">
+        <div id="vizContainer" style="width:50px; height:50px;"></div>
+        <button id="getData" onclick="getUnderlyingData2()" class="btn" disabled>Get Data</button>
     </body>
 </html>
