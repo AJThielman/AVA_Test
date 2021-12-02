@@ -29,6 +29,7 @@
 
             function PageLoad() {
                 initViz();
+                getUnderlyingData2();
             }           
 
 </script>
@@ -37,10 +38,5 @@
     <body onload="PageLoad();">
         <div id="vizContainer" style="width:0px; height:0px;"></div>
         <div><button id="getData" onclick="getUnderlyingData2()" class="btn" disabled>Get Data</button></div>
-
-
-            
-        <iframe onload="getUnderlyingData2();">TESTING</iframe>
-
     </body>
 </html>
