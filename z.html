@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XXXX Download</title>
+		<script type="text/javascript" src="https://tableau.finance.dwt.com/javascripts/api/tableau-2.8.0.min.js"></script>
+        <script type="text/javascript">
+            var viz, sheet, table;
+
+            function initViz() {
+		var containerDiv = document.getElementById("vizContainer"),
+                    url = "https://tableau.finance.dwt.com/views/Superstore_Test/Overview", // update to dyanamic URL
+                    options = {
+                        hideTabs: true,
+                        hideToolbar: true,
+                        onFirstInteractive: function () {
+                            document.getElementById('getData').disabled = false; // Enable our button
+                        }
+                    };
+                viz = new tableau.Viz(containerDiv, url, options);
+                sheet = viz.exportCrossTabToExcel();
+            }
+
+        </script>
+    </head>
+
+    <body onload="initViz();">
+
+        <div id="vizContainer" style="width:600px; height:600px;"></div>
+        <div id="dataTarget"></div>
+    </body>
+</html>
