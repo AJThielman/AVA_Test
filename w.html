@@ -7,8 +7,18 @@
             var viz, sheet, table;
 
             function initViz() {
-		var containerDiv = document.getElementById("vizContainer"),
-                    url = "https://tableau.finance.dwt.com",
+
+                const queryString = window.location.search;
+         
+         const urlParams = new URLSearchParams(queryString);
+         
+         const view = urlParams.get('view')
+         
+         console.log(view);
+
+
+                var containerDiv = document.getElementById("vizContainer"),
+                    url = view,
                     options = {
                         hideTabs: false,
                         hideToolbar: false
