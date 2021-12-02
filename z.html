@@ -7,8 +7,19 @@
             var viz, sheet, table;
 
             function initViz() {
+
+
+const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+
+const page_type = urlParams.get('page_type')
+
+console.log(page_type);
+
+
 		        var containerDiv = document.getElementById("vizContainer"),
-                    url = "https://tableau.finance.dwt.com/views/SuperstorewithnewExtension/Overview",
+                    url = concat("https://tableau.finance.dwt.com/views/Superstore_Test/Overview?:iid=",page_type),
                     options = {
                         hideTabs: true,
                         hideToolbar: true,
@@ -43,13 +54,6 @@ while(Date.now() < milisecondDelay){}
                
                 
 
-const queryString = window.location.search;
-
-const urlParams = new URLSearchParams(queryString);
-
-const page_type = urlParams.get('page_type')
-
-console.log(page_type);
 
 
             }           
