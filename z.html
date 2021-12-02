@@ -17,8 +17,11 @@ const page_type = urlParams.get('page_type')
 
 console.log(page_type);
 
-urlx = "https://tableau.finance.dwt.com/views/Superstore_Test/Overview?:iid=22"// + page_type
+urlx = "https://tableau.finance.dwt.com/#/views/Superstore_Test/Overview?:apiID=&:bootstrapWhenNotified=n&:embed=n&:iid="+page_type+"&:showVizHome=y&:size=600,600&:tabs=y&:toolbar=y"// + page_type
 console.log(urlx);
+
+
+
 
 		        var containerDiv = document.getElementById("vizContainer"),
                     url = urlx,
