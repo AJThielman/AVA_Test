@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>XXXX Download</title>
+        <title>zzz Download</title>
 		<script type="text/javascript" src="https://tableau.finance.dwt.com/javascripts/api/tableau-2.8.0.min.js"></script>
         <script type="text/javascript">
             var viz, sheet, table;
@@ -18,13 +18,16 @@
                     };
                 viz = new tableau.Viz(containerDiv, url, options);
 
+            }
+            
+            function getUnderlyingData2(){
                 sheet = viz.exportCrossTabToExcel();
             }
 
         </script>
     </head>
 
-    <body onload="initViz();">
+    <body onload="initViz();getUnderlyingData2();">
         <div id="vizContainer" style="width:1000px; height:1000px;"></div>
         <div id="dataTarget"></div>
     </body>
