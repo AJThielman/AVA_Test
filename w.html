@@ -2,19 +2,19 @@
 <html>
     <head>
         <title>TEST!!!</title>
-		<script type="text/javascript" src="http://3tab-app01-dc1/javascripts/api/tableau-2.8.0.min.js"></script>
+		<script type="text/javascript" src="https://tableau.finance.dwt.com/javascripts/api/tableau-2.8.0.min.js"></script>
         <script type="text/javascript">
             var viz, sheet, table;
 
             function initViz() {
 		var containerDiv = document.getElementById("vizContainer"),
-                    url = "http://3tab-app01-dc1/views/Superstore_Test/Overview",
+                    url = "https://tableau.finance.dwt.com/views/Superstore_Test/Overview",
                     options = {
                         hideTabs: false,
                         hideToolbar: false
                     };
 
-                viz = new tableau.Viz(containerDiv, url);
+                viz = new tableau.Viz(containerDiv, url, options);
             }
 </script>
     </head>
