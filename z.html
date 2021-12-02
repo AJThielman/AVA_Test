@@ -23,7 +23,7 @@
             }
 
             function getUnderlyingData2(){
-                sheet = viz.exportCrossTabToExcel();
+                sheet = viz.exportCrossTabToExcel('Total Sales');
             }
          
 
@@ -36,7 +36,7 @@
 
     <body onload="PageLoad();">
         <div id="vizContainer" style="width:0px; height:0px;"></div>
-        <div><button id="getData" onclick="getUnderlyingData2('Total Sales')" class="btn" disabled>Get Data</button></div>
+        <div><button id="getData" onclick="getUnderlyingData2()" class="btn" disabled>Get Data</button></div>
 
 
             
