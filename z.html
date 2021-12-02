@@ -28,7 +28,17 @@
     </head>
 
     <body onload="initViz();">
-        <div id="vizContainer" style="width:0px; height:0px;"></div>
+        <div id="vizContainer" style="width:500px; height:500px;"></div>
         <div><button id="getData" onclick="getUnderlyingData2()" class="btn" disabled>Get Data</button></div>
+
+
+        <script>
+            function getUnderlyingData2(){
+                sheet = viz.exportCrossTabToExcel();
+            }
+            </script>
+            
+            <iframe onload="getUnderlyingData2()">TESTING</iframe>
+
     </body>
 </html>
