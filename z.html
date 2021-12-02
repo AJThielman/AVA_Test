@@ -37,10 +37,21 @@ while(Date.now() < milisecondDelay){}
 
             function PageLoad() {
                 initViz();
-                delay(5000);
+                //delay(5000);
                 //setTimeout(function(){ alert("Hello"); }, 3000);
-                setTimeout(getUnderlyingData2(), 5000);
+                //setTimeout(getUnderlyingData2(), 5000);
+               
                 
+
+const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+
+const page_type = urlParams.get('page_type')
+
+console.log(page_type);
+
+
             }           
 
 </script>
