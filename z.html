@@ -27,8 +27,17 @@
             }
          
 
+
+function delay(milisecondDelay) {
+milisecondDelay += Date.now();
+while(Date.now() < milisecondDelay){}
+}
+
+
+
             function PageLoad() {
                 initViz();
+                delay(5000);
                 //setTimeout(function(){ alert("Hello"); }, 3000);
                 setTimeout(getUnderlyingData2(), 5000);
                 
